@@ -1,38 +1,149 @@
-.App {
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #333;
+}
+
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 400px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+  color: #007BFF;
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Word display styles */
+.word-container {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.letter {
+  font-size: 2rem;
+  width: 40px;
+  height: 40px;
+  margin: 0 5px;
+  border: 2px solid #007BFF;
+  border-radius: 5px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  background-color: #e9ecef;
+}
+
+.letter.visible {
+  background-color: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.word-description {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #6c757d;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Message styles */
+.message p {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #dc3545;
+  margin-top: 20px;
+}
+
+/* Letter selection button styles */
+.letter-selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.letter-selection button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+}
+
+.letter-selection button.selected {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.letter-selection button:disabled {
+  background-color: #d6d8db;
+  cursor: not-allowed;
+}
+
+/* Action buttons styles */
+.button-section {
+  margin-top: 20px;
+}
+
+.button-section button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px;
+  width: 150px;
+}
+
+.button-section button:disabled {
+  background-color: #d6d8db;
+  cursor: not-allowed;
+}
+
+/* Restart button specific styles */
+.restart-button {
+  background-color: #28a745;
+}
+
+.remove-button {
+  background-color: #ffc107;
+}
+
+.hint-button {
+  background-color: #17a2b8;
+}
+
+.guess-button {
+  background-color: #dc3545;
+}
+
+/* Wrong guesses count styles */
+p {
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #6c757d;
+}
+
+p strong {
+  font-weight: bold;
+  color: #dc3545;
 }
